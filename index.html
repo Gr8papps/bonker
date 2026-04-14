@@ -70,11 +70,7 @@
 					headers: {'Content-Type': 'application/x-www-form-urlencoded'},
 					body: data.toString(),
 				})
-				.then(response => response.json())
-				.then(result => {
-                    if (result.r == "success"){
-						result.passbypass = bypass;
-                        document.getElementById('maingameframe').contentWindow.autoJoin = result;
+				.then( document.getElementById('maingameframe').contentWindow.autoJoin = result;)
                     }
 				})
 				.catch(error => {
@@ -295,7 +291,7 @@
 	</div>
 </div>
 
-<iframe id="maingameframe" src="gameframe-release.html"></iframe>
+<iframe id="maingameframe" src="https://cdn.jsdelivr.net/gh/Gr8papps/bonker@main/gameframe-release.html"></iframe>
 
 
 <div id="adboxverticalleftCurse">
